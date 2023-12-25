@@ -6,7 +6,7 @@ node {
             checkout([$class: 'GitSCM',
             branches: [[name: '*/main']],
             extensions: [],
-            userRemoteConfigs: [[credentialsId: 'git', url: 'https://github.com/shabbirdwd53/PaymentService.git']]])
+            userRemoteConfigs: [[credentialsId: 'git', url: 'https://github.com/jaykakkassery/PaymentService.git']]])
     }
     stage('Build and Push Image') {
         withCredentials([file(credentialsId: 'gcp', variable: 'GC_KEY')]) {
